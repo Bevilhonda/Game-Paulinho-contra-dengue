@@ -1,0 +1,54 @@
+document.addEventListener('keydown', jump);
+
+function jump(event) {
+    if (event.code === 'Space') {
+        const paulinho = document.querySelector('.paulinho');
+        let position = 0;
+
+        const upInterval = setInterval(() => {
+            if (position >= 300) {
+                clearInterval(upInterval);
+                const downInterval = setInterval(() => {
+                    if (position === 0) {
+                        clearInterval(downInterval);
+                    } else {
+                        position -= 15;
+                        paulinho.style.bottom = position + 'px';
+                    }
+                }, 20);
+            } else {
+                position += 20;
+                paulinho.style.bottom = position + 'px';
+            }
+        }, 20);
+    }
+}
+
+const mosquito = document.querySelector('.mosquito');
+
+function randomizeMosquitoPosition() {
+    const randomPosition = Math.random() > 0.5 ? 20 : 70; // Altera entre 20px e 70px
+    mosquito.style.bottom = randomPosition + 'px';
+}
+
+mosquito.addEventListener('animationiteration', randomizeMosquitoPosition);
+
+function checkCollision() {
+    const paulinho = document.querySelector('.paulinho');
+    const paulinhoRect = paulinho.getBoundingClientRect();
+    const mosquitoRect = mosquito.getBoundingClientRect();
+
+    const collisionBuffer = 30; // Ajuste este valor para a precisão desejada
+
+    if (
+        paulinhoRect.left < mosquitoRect.right - collisionBuffer &&
+        paulinhoRect.right > mosquitoRect.left + collisionBuffer &&
+        paulinhoRect.bottom > mosquitoRect.top + collisionBuffer &&
+        paulinhoRect.top < mosquitoRect.bottom - collisionBuffer
+    ) {
+        alert('Game Over: VOCÊ PERDEU BEBEZINHO !!! ' + '\n' + 'O MOSQUITO DA DENGUE LHE PICOU');
+        clearInterval(collisionCheckInterval);
+    }
+}
+
+const collisionCheckInterval = setInterval(checkCollision, 35);

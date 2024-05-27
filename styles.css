@@ -1,0 +1,85 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.game-container {
+  background-image: url('imagens/fundo.jpg');
+  background-size: cover; /* Ajusta o tamanho da imagem para cobrir totalmente o contêiner */
+  background-position: 0 0; /* Inicializa a posição do fundo */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+  overflow: hidden; /* Garantir que o obstáculo não saia do contêiner */
+  animation: moveBackground 10s linear infinite; /* Adiciona a animação */
+}
+
+.background-text {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 24px; /* Aumenta o tamanho da fonte */
+  font-weight: bold; /* Torna a fonte mais grossa */
+  color: white;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.background-text_2 {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  font-size: 34px; /* Aumenta o tamanho da fonte */
+  font-weight: bold; /* Torna a fonte mais grossa */
+  color: rgb(229, 228, 238);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.ground {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 20px; /* Altura do chão */
+  background-color: #654321; /* Cor do chão */
+  border-top: 2px solid #3e2c1b; /* Borda para dar aparência de chão */
+}
+
+@keyframes moveBackground {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -1000px 0; /* Ajusta este valor conforme necessário para a velocidade e tamanho do loop */
+  }
+}
+
+.paulinho {
+  width: 150px;
+  height: 170px;
+  background-image: url('imagens/mascote.gif');
+  background-size: cover;
+  position: relative; /* Alterado para absolute para facilitar a animação */
+  bottom: 10px; /* Alinha o personagem ao topo do chão */
+}
+
+.mosquito {
+  width: 85px;
+  height: 40px;
+  background-image: url('imagens/mosquito1.png');
+  background-size: cover;
+  position: absolute;
+  bottom: 20px; /* Alinha o obstáculo ao topo do chão */
+  right: -60px;
+  animation: moveObstacle 3s linear infinite;
+}
+
+@keyframes moveObstacle {
+  0% {
+    right: -50px;
+  }
+  100% {
+    right: 100%;
+  }
+}
