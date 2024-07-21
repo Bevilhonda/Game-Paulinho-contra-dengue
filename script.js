@@ -48,6 +48,10 @@ function checkCollision() {
     ) {
         mensagemDeErro('Game Over: VOCÊ PERDEU BEBEZINHO !!! ' + '\n' + 'O MOSQUITO DA DENGUE LHE PICOU');
         clearInterval(collisionCheckInterval);
+        clearInterval(upInterval); // Parar o movimento ascendente do Paulinho
+        clearInterval(downInterval); // Parar o movimento descendente do Paulinho
+        clearInterval(mosquitoAnimationInterval); // Parar a animação do mosquito (necessário se o mosquito se move com animação)
+
     }
 }
 
