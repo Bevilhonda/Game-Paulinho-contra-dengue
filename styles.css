@@ -83,3 +83,18 @@ body, html {
     right: 100%;
   }
 }
+
+.message-box {
+  position: fixed;
+  top: 21%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  background-color: #040536;
+  color: #4ff378;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  font-size: 1.5rem; 
+}
