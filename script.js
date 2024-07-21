@@ -52,3 +52,16 @@ function checkCollision() {
 }
 
 const collisionCheckInterval = setInterval(checkCollision, 35);
+
+function mensagemDeErro(message) {
+  let caixaDeMensagem = document.createElement('div');
+  caixaDeMensagem.className = 'message-box';
+  caixaDeMensagem.textContent = message;
+  document.body.appendChild(caixaDeMensagem);
+
+  // essa função remove a mensagem após alguns segundos. 
+  setTimeout(function () {
+    document.body.removeChild(caixaDeMensagem);
+  }, 5000);
+  // esse numero de 5000 equivale á 5 segundos , é o tempo que a mensagem fica na tela
+}
