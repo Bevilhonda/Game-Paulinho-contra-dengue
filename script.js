@@ -65,3 +65,15 @@ function mensagemDeErro(message) {
   }, 5000);
   // esse numero de 5000 equivale á 5 segundos , é o tempo que a mensagem fica na tela
 }
+
+const restarButton = document.getElementById('restartButton');
+
+  restartButton.addEventListener('click', () => {
+   paulinho.style.bottom = '10px';
+   mosquito.style.bottom = '20px';
+   mosquito.style.right = '-60px';
+   clearInterval(collisionCheckInterval);
+   collisionCheckInterval = setInterval(checkCollision, 35);
+   document.addEventListener('keydown', jump);
+   restartButton.style.display = 'none'; 
+});
