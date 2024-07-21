@@ -46,7 +46,7 @@ function checkCollision() {
         paulinhoRect.bottom > mosquitoRect.top + collisionBuffer &&
         paulinhoRect.top < mosquitoRect.bottom - collisionBuffer
     ) {
-        mensagemDeErro('Game Over: Puxa que pena !!! ' + '\n' + 'O MOSQUITO DA DENGUE LHE PICOU ');
+        mensagemGameOver('Game Over: Puxa que pena !!! ' + '\n' + 'O MOSQUITO DA DENGUE LHE PICOU ');
         clearInterval(collisionCheckInterval);
         clearInterval(upInterval); // Parar o movimento ascendente do Paulinho
         clearInterval(downInterval); // Parar o movimento descendente do Paulinho
@@ -58,7 +58,7 @@ function checkCollision() {
 
 const collisionCheckInterval = setInterval(checkCollision, 35);
 
-function mensagemDeErro(message) {
+function mensagemGameOver(message) {
   let caixaDeMensagem = document.createElement('div');
   caixaDeMensagem.className = 'message-box';
   caixaDeMensagem.textContent = message;
