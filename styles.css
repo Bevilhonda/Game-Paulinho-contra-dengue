@@ -72,7 +72,7 @@ body, html {
   position: absolute;
   bottom: 20px; /* Alinha o obstáculo ao topo do chão */
   right: -60px;
-  animation: moveObstacle 3s linear infinite;
+  animation: moveObstacle 2s linear infinite;
 }
 
 @keyframes moveObstacle {
