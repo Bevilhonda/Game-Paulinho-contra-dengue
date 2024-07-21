@@ -99,7 +99,7 @@ body, html {
   font-size: 1.5rem; 
 }
 
-.restartButton{
+.restart-button{
    position: absolute; /* Posicione o botão na tela */
   bottom: 40px; /* Ajuste a posição vertical do botão */
   left: 50%; /* Centralize o botão horizontalmente */
