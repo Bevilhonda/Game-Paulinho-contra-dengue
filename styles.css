@@ -86,8 +86,8 @@ body, html {
 
 .message-box {
   position: fixed;
-  top: 21%;
-  left: 25%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   background-color: #040536;
   color: #4ff378;
