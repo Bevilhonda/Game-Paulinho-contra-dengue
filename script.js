@@ -75,5 +75,6 @@ const restarButton = document.getElementById('restartButton');
    clearInterval(collisionCheckInterval);
    collisionCheckInterval = setInterval(checkCollision, 35);
    document.addEventListener('keydown', jump);
-   restartButton.style.display = 'none'; 
-});
+    
+}
+);
