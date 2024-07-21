@@ -46,9 +46,7 @@ function checkCollision() {
         paulinhoRect.bottom > mosquitoRect.top + collisionBuffer &&
         paulinhoRect.top < mosquitoRect.bottom - collisionBuffer
     ) {
-        
         mensagemDeErro('Game Over: VOCÊ PERDEU BEBEZINHO !!! ' + '\n' + 'O MOSQUITO DA DENGUE LHE PICOU');
-        
         clearInterval(collisionCheckInterval);
     }
 }
