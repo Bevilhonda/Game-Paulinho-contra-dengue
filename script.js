@@ -51,6 +51,7 @@ function checkCollision() {
         clearInterval(upInterval); // Parar o movimento ascendente do Paulinho
         clearInterval(downInterval); // Parar o movimento descendente do Paulinho
         clearInterval(mosquitoAnimationInterval); // Parar a animação do mosquito (necessário se o mosquito se move com animação)
+        restartButton.style.display = 'block';
 
     }
 }
