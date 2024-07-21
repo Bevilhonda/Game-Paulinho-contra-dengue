@@ -98,3 +98,16 @@ body, html {
   z-index: 9999;
   font-size: 1.5rem; 
 }
+
+.restartButton{
+   position: absolute; /* Posicione o botão na tela */
+  bottom: 40px; /* Ajuste a posição vertical do botão */
+  left: 50%; /* Centralize o botão horizontalmente */
+  transform: translate(-50%, -50%); /* Mantenha o botão centralizado após a transformação */
+  padding: 10px 20px; /* Ajuste o espaçamento interno do botão */
+  background-color: #4CAF50; /* Cor de fundo do botão */
+  color: white; /* Cor do texto do botão */
+  border: none; /* Remova a borda padrão do botão */
+  cursor: pointer; /* Exiba o cursor de mão ao passar o mouse sobre o botão */
+  display: none; /* Oculte o botão inicialmente */
+}
